@@ -1,0 +1,116 @@
+/* Estilos para el calendario */
+.cal-month-view {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Estilos para los días de la semana */
+.mwl-calendar-month-cell-header {
+  font-weight: bold;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilos para los días del mes */
+.mwl-calendar-month-cell {
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.mwl-calendar-active-day {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.mwl-calendar-inactive-day {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos para los eventos del calendario */
+.mwl-calendar-event {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa semi-transparente */
+  z-index: 9999; /* Asegúrate de que esté por encima de todo el contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  /* Agrega estilos para el spinner de carga o mensaje de carga */
+  color: aliceblue;
+}
+
+
+
+
+.demo-inline-calendar-card {
+    width: 300px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 60vh; */
+}
+
+
+.uno{
+  margin: 10px; 
+  margin-top: 50px;
+  }
+  .imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+
+  }
+  .image {    
+      background-size:  cover ;    
+      background-repeat: no-repeat;
+      width: 100px;
+      height:100px;      
+      border: 1px solid rgb(183, 0, 255);
+      border-radius: 20px;
+      background-color: rgb(247, 240, 250);  
+      color: rgb(183, 0, 255);
+      margin-bottom: 5px;
+
+    }
+.uno .title{
+  font-size: 36px!important;
+}

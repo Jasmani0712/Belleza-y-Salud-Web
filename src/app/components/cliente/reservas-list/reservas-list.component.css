@@ -1,0 +1,457 @@
+.cat {
+    border: 3px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(237, 209, 255);
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    /* margin-top: 50px; */
+
+}
+
+.cat .info {
+    padding: 15px 5px;
+}
+
+.cat .image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.logobys {
+    /* background-size: cover; */
+    background-position: center;
+    width: 10%;
+    height: 20%;
+    /* border: 3px solid rgb(183, 0, 255); */
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+.cat h4 {
+    flex-grow: 1; /* Permite que el elemento h4 ocupe todo el espacio vertical disponible */
+    margin: 0;
+    padding: 5px;
+}
+h1{
+    font-size: 2.8rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+.salon-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .salon-label {
+    color:  rgb(183, 0, 255);
+    font-weight: 450;
+
+    margin-right: 10px;
+  }
+  .image-container {
+    position: relative;
+    width: 100%; /* Ancho deseado para el contenedor */
+    height: 30px; /* Alto deseado para el contenedor */
+  }
+  
+  .small-image {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px; /* Ancho deseado para la imagen */
+    height: 50px; /* Alto deseado para la imagen */
+    margin-bottom: 5px;
+    margin-right: 4px;
+  }
+  .cuadro {
+    display: flex;
+    border: 3px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(237, 209, 255);
+    /* display: grid; */
+    /* grid-template-columns: 3fr 3fr; */
+    /* overflow: hidden; */
+    margin-bottom: 20px;
+    margin-left: 220px; 
+    margin-right: 220px;  
+  }
+  .lado {
+    flex: 1;
+    padding: 20px;
+    /* border: 1px solid #000; */
+  }
+  
+  .lado-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+
+  }
+  
+  .lado-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+    
+/* Estilos para pantallas más pequeñas */
+@media ( max-width: 1020px) {
+    .cat {
+        border: 1px solid rgb(179, 26, 26);
+        border-radius: 20px;
+        /* display: grid; */
+        grid-template-columns: 3fr 1fr;
+        /* overflow: hidden; */
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .cat .info {
+        padding: 10px 10px;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+
+    .cuadro {
+      display: flex;
+      border: 3px solid rgb(183, 0, 255);
+      border-radius: 20px;
+      background-color: rgb(237, 209, 255);
+      /* display: grid; */
+      /* grid-template-columns: 3fr 3fr; */
+      /* overflow: hidden; */
+      margin-bottom: 20px;
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+    .lado {
+      flex: 1;
+      padding: 20px;
+      /* border: 1px solid #000; */
+    }
+    
+    .lado-imagen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* max-width: 100%; */
+      /* max-height: 100%; */
+      border-radius: 20px;
+      background-size: cover;
+
+    }
+    
+    .lado-imagen img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+  }
+
+  @media ( max-width: 600px) {
+    .cat {
+        border: 1px solid rgb(179, 26, 26);
+        border-radius: 20px;
+        /* display: grid; */
+        grid-template-columns: 3fr 1fr;
+        /* overflow: hidden; */
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .cat .info {
+        padding: 10px 10px;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+
+    .cuadro {
+      display: flex;
+      border: 3px solid rgb(183, 0, 255);
+      border-radius: 20px;
+      background-color: rgb(237, 209, 255);
+      /* display: grid; */
+      /* grid-template-columns: 3fr 3fr; */
+      /* overflow: hidden; */
+      margin-bottom: 20px;
+      margin-left: 2px;
+      margin-right: 2px; 
+    }
+    .lado {
+      flex: 1;
+      padding: 20px;
+      /* border: 1px solid #000; */
+    }
+    
+    .lado-imagen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* max-width: 100%; */
+      /* max-height: 100%; */
+      border-radius: 20px;
+      background-size: cover;
+
+    }
+    
+    .lado-imagen img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .uno{
+    margin: 200px; 
+    margin-top: 50px;
+    }
+    .button-grid {
+        margin-top: 40px;
+        display: grid;
+        /* display: flex;si importa para 3 o mas columnas */
+        /*flex-wrap: wrap; /*si importa para 3 o mas columnas*/
+        /*justify-content: center; /*no importa mucho creo*/
+        grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+        gap: 30px; /* Espacio entre los botones */
+        
+    }
+    .select-city{
+    
+        grid-column: span 2; /*Ocupar dos columnas */
+        text-align: center; /* Alinear el texto al centro */
+        width: 50%; /* Ancho del botón al 50% */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+    .button-grid .card {
+        /*width: 30.33%; /* Por defecto, 3 columnas si importa para 3 o mas columnas */
+        border: 2px solid rgb(183, 0, 255);
+        border-radius: 20px;
+        background-color: rgb(247, 240, 250);  
+        color: rgb(183, 0, 255);
+        position: relative;
+        /* border: 1px solid transparent; Borde transparente */
+        padding: 0px; /* Espacio interno */
+        text-align: left; /* Alinear el texto al centro */
+        transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        /* cursor: pointer; */
+    
+    
+    }
+    .button-grid .card:hover{
+        /*background-color: rgb(235, 185, 255); /* Cambiar el color de fondo al pasar el cursor */
+        /*color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+        /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+        /*border: 2px solid rgb(0, 0, 0); /* Borde rojo */
+    }
+    .button-grid .image {
+        background-size: 100% 100%;
+        /* background-size:  contain ; */
+    
+        /* background-position: center; */
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height:100%;
+        border-radius: 20px 0px 0px 20px;
+    
+    }
+    .button-grid .info {
+        padding: 10px 15px;
+        text-align: left;
+    
+        /* font-size: 10px; */
+    
+    }
+    .uno .title{
+        font-size: 36px!important;
+    }
+    
+    h2,p{color: black!important; margin-bottom: 1px;}
+    h3{    font-weight: 500;margin-bottom: 1px;
+    }
+    .promo{
+        background-color: gold!important;
+        border-radius: 0px 20px 20px 0px;
+        /* padding-right: 100px; */
+        margin-top: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 40%;
+      
+    }
+    @media ( max-width: 1300px) {
+        .uno{
+            margin: 20px; 
+            margin-top: 40px;
+        }
+        .button-grid {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+            gap: 20px; /* Espacio entre los botones */    
+    
+        }
+        .button-grid .image {
+            background-size: 100% 100%;
+    
+            /* background-size:  contain ; */
+            background-position: left 20% 10%;
+    
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0px 0px 20px;
+        }
+        .button-grid .info {
+            padding: 10px 10px;
+        }
+        .info .letra{
+            /* font-size: 2px; */
+            /* font-size: 1px!important; */
+            /* color:aqua ; */
+        }
+    }
+    
+    @media ( max-width: 700px) {
+        .uno{
+            margin: 10px; 
+            margin-top: 40px;
+        }
+        .button-grid {
+            margin-top: 30px;
+            /* display: grid; */
+            display: contents;
+
+            /*grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+            gap: 10px; /* Espacio entre los botones */    
+    
+        }
+        .button-grid .card{
+          margin-bottom: 15px; /* Espacio debajo de cada botón */
+          grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+  
+      }
+        .button-grid .image {
+            background-size: 100% 100%;
+    
+            /* background-size:  contain ; */
+            background-position: left 20% 10%;
+    
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0px 0px 20px;
+        }
+        .button-grid .info {
+            padding: 5px 3px;
+        }
+        .info .letra{
+            /* font-size: 2px; */
+            /* font-size: 0,1px!important; */
+            /* color:aqua ; */
+            
+        }
+        h3,h2 {
+            line-height: 1.5; /* Ajusta el espacio entre líneas al 150% del tamaño de fuente */
+    
+            margin-top: 1px; /* Espacio superior del párrafo */
+            margin-bottom: 1px; /* Espacio inferior del párrafo */
+            
+    
+          }
+    }
+    
+    @media ( max-width: 500px) {
+        .uno{
+            margin: 10px; 
+            margin-top: 30px;
+    
+        }
+        .button-grid {
+            /*grid-template-columns: 1fr; /* Cambia a una sola columna */
+    
+            margin-top: 20px;
+            /* display: grid; */
+            /*grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+            gap: 5px; /* Espacio entre los botones */    
+    
+            display: contents;
+            /*grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+        }
+        .button-grid .card{
+            margin-bottom: 15px; /* Espacio debajo de cada botón */
+            grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+    
+        }
+        .select-city{
+    
+            grid-column: span 2; /*Ocupar dos columnas */
+            text-align: center; /* Alinear el texto al centro */
+            width: 100%; /* Ancho del botón al 50% */
+            margin: 0 auto; /* Centrar horizontalmente */
+            margin-bottom: 20px;
+        }
+        .button-grid .image {
+            background-size: 100% 100%;
+    
+            /* background-size:  contain ; */
+            background-position: left 20% 10%;
+    
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0px 0px 20px;
+        }
+        .button-grid .info {
+            padding: 10px 5px;
+        }
+        .info {
+            /* font-size: 2px; */
+            /* font-size: 10px; */
+            /* color:blue ; */
+            /* font-weight: 500; */
+    
+            line-height: 1.5; /* Ajusta el espacio entre líneas al 150% del tamaño de fuente */
+    
+        }
+        h3,h2 {
+            margin-top: 1px; /* Espacio superior del párrafo */
+            margin-bottom: 1px; /* Espacio inferior del párrafo */
+            
+    
+          }
+    }
+    
+    
+    
+    
+    

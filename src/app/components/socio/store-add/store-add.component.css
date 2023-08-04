@@ -1,0 +1,121 @@
+.uno{
+    margin: 400px; 
+    margin-top: 50px;
+    }
+    .imagen{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-direction: column;
+
+    }
+    .image {    
+        background-size:  cover ;    
+        background-repeat: no-repeat;
+        width: 100px;
+        height:100px;      
+        border: 1px solid rgb(183, 0, 255);
+        border-radius: 20px;
+        background-color: rgb(247, 240, 250);  
+        color: rgb(183, 0, 255);
+        margin-bottom: 5px;
+
+      }
+  .uno .title{
+    font-size: 36px!important;
+  }
+.h1{
+    margin-top: 20px;
+    padding-top: 30px!important;
+  
+}
+.main{
+    border: 3px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(252, 247, 255);
+    margin: 200px; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 50;
+}
+.form{
+    /* text-align: center; */
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+
+}
+.mb-3,.btn{
+    
+    margin: 20px;
+    /* border: 3px solid rgb(60, 255, 0); */
+   
+}
+.form-label {
+    color:rgb(212, 0, 255);
+    padding-right: 10px;
+}
+
+.btn{
+   
+    border: 3px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(162, 0, 255);
+    color:rgb(255, 255, 255);
+   
+    margin-top: 40px;
+    /* margin-left: 50px; */
+}
+
+.small-image {
+    width: 250px;
+    height: 250px;
+  }
+  .archivo{
+    display: inline-block;
+    padding: 10px 20px;
+    
+    color: #fff;
+    border: 1px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(183, 0, 255);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @media ( max-width: 1300px) {
+    .uno{
+      margin: 100px; 
+      margin-top: 50px;
+      }
+    .button {
+      flex-basis: 20%;
+    }
+  }
+  @media ( max-width: 700px) {
+    .uno{
+      margin: 10px; 
+      margin-top: 50px;
+      }
+    .button {
+      flex-basis: 20%;
+    }
+  }
+
+  @media ( max-width: 500px) {
+    .button {
+      flex-basis: 20%;
+    }
+    .uno{
+        margin: 1px; 
+        margin-top: 30px;
+
+    }
+}

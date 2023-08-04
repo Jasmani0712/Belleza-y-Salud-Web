@@ -1,0 +1,200 @@
+.uno{
+    margin: 200px; 
+    margin-top: 20px;
+  }
+  
+  /* IMAGEN SHOP */
+  .imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .image {    
+    background-size:  cover ;    
+    background-repeat: no-repeat;
+    width: 200px;
+    height:200px;      
+    border: 1px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(247, 240, 250);  
+    color: rgb(183, 0, 255);
+    margin-bottom: 5px;
+  }
+  .uno .title{
+    font-size: 36px!important;
+  }
+  
+
+  /* STORE */
+  .card-store{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4); /* Aplica una sombra al botón */
+  
+    padding: 15px;
+  }
+  ngb-rating{
+    color: gold;
+    font-size: 80px;
+    margin: 50px;
+  }
+  textarea[type="text"] {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    padding: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 50px;
+  }
+  
+  textarea[type="text"]:focus,
+  textarea[type="text"]:hover {
+    border-color: rgb(183, 0, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button-grid button {
+    border: 2px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(247, 240, 250);  
+    position: relative;
+    /* border: 1px solid transparent; Borde transparente */
+    padding-top: 20px; /* Espacio interno */
+    padding-bottom: 20px; /* Espacio interno */
+
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: center; /* Alinear el texto al centro */
+    transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+    font-size: 16px!important;
+    font-weight: 500;
+}
+
+.button-grid button:hover {
+    background-color: rgb(208, 88, 255); /* Cambiar el color de fondo al pasar el cursor */
+    color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+    /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+    border: 2px solid rgb(0, 0, 0); /* Borde rojo */
+}
+
+      @media ( max-width: 1300px) {
+        .uno{
+            margin: 20px; 
+            margin-top: 40px;
+        }
+        .grid-container {
+
+            grid-template-columns: 35% 15% 15%; /* Distribución en 3 columnas */
+        
+        }
+        .grid-item {         
+            padding: 5px;
+        }
+        ngb-rating{
+            color: gold;
+            font-size: 80px;
+            margin: 50px;
+        }
+        textarea[type="text"] {
+            width: 400px;    
+        }
+        .button-grid button {       
+            padding-left: 100px;
+            padding-right: 100px;        
+        }
+  
+       
+      }
+      
+      @media ( max-width: 700px) {
+          .uno{
+              margin: 10px; 
+              margin-top: 40px;
+          }
+          .grid-container {
+  
+            grid-template-columns: 65% 5% 30%; /* Distribución en 3 columnas */
+  
+          }
+          .grid-item {         
+            padding: 5px;
+            
+          }
+          ngb-rating{
+            color: gold;
+            font-size: 80px;
+            margin: 50px;
+        }
+        textarea[type="text"] {
+            width: 400px;    
+        }
+        .button-grid button {       
+            padding-left: 100px;
+            padding-right: 100px;        
+        }
+       
+          h3,h2 {
+              line-height: 1.5; /* Ajusta el espacio entre líneas al 150% del tamaño de fuente */
+      
+              margin-top: 1px; /* Espacio superior del párrafo */
+              margin-bottom: 1px; /* Espacio inferior del párrafo */
+              
+      
+            }
+   
+      }
+      
+      @media ( max-width: 500px) {
+          .uno{
+              margin: 10px; 
+              margin-top: 30px;
+      
+          }
+          .grid-container {
+  
+            grid-template-columns: 45% 15% 30%; /* Distribución en 3 columnas */
+  
+          }
+          .grid-item {         
+            padding: 2px;
+            
+          }
+          .button-grid {
+              /*grid-template-columns: 1fr; /* Cambia a una sola columna */
+      
+              margin-top: 20px;
+              /* display: grid; */
+              /*grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+              gap: 5px; /* Espacio entre los botones */    
+      
+              display: contents;
+              /*grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+          }
+          ngb-rating{
+            color: gold;
+            font-size: 70px;
+            margin: 50px;
+        }
+        textarea[type="text"] {
+            width: 300px;    
+        }
+        .button-grid button {       
+            padding-left: 50px;
+            padding-right: 50px;        
+        }
+          h3,h2 {
+              margin-top: 1px; /* Espacio superior del párrafo */
+              margin-bottom: 1px; /* Espacio inferior del párrafo */
+              
+      
+            }
+      }
+      
+      
+      
+      
+      
+  

@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+body{
+    /* background: #8E2DE2;  fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #4A00E0, #8E2DE2); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('./assets/fondo.jpg'); */
+    /* background-image: url('./assets/fondo.jpg'); */
+
+
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; */
+    
+
+}
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+/* html, body { height: 100%; } */
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1{
+    text-align: center;
+    margin: 50;
+    color: rgb(212, 0, 255);
+    /* font-weight: 900; */
+    font-weight: 700;
+
+}
+h2{
+    /* color: rgb(212, 0, 255); */
+}
+
+button{
+    color: rgb(212, 0, 255);
+
+}

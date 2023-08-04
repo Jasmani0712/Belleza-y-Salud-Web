@@ -1,0 +1,16 @@
+<div class="uno">
+    <div class="imagen"  *ngFor="let resultadosShop of resultadosShop">
+        <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultadosShop.foto_shop+')', }" >
+              
+        </div>
+        {{id}}
+    </div>
+    <p>Sesión: {{mail}}</p>
+    <div class="button-grid">
+        <button routerLink="/citas-agendadas/{{id}}">CITAS AGENDADAS {{id}}</button>
+        <button routerLink="/admin-socio/{{id}}">ADMINISTRAR NEGOCIO</button>
+        <button>INFO</button>
+        <button (click)="onClickLogout()">CERRAR SESIÓN</button>
+        <button class="centered" routerLink="/main/">MODO CLIENTE</button>
+    </div>
+</div>

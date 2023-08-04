@@ -1,0 +1,105 @@
+<div class="uno"  >
+  <h1 class="title">CITAS AGENDADAS</h1>
+  <!-- <p>{{ fecha  }}</p>
+  <p>{{ fechadate  }}</p>
+  <p>Fecha actual: {{ fechadate | date }}</p>
+  <p>Fecha actual: {{ fechadate | date: 'dd/MM/yyyy' }}</p>
+
+  <p>Fecha actual: {{ t }}</p>
+  <p>Fecha actual: {{ datee | date: 'dd/MM/yyyy hh:mm:ss' }}</p>
+  <p>{{ convertirATextoFecha(t) }}</p> -->
+
+
+    <div class="button-grid" >   
+ 
+      <div class="card" *ngFor="let cat of cats" >
+          <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+cat.photo_r+')' }" >
+            <!-- <p class="promo">{{cat.promo}}</p> -->
+          </div>
+          <div class="info">
+            <div class="salon-container">
+              <h3 class="salon-label">SALÓN:</h3>
+              <p >{{cat.salon_r}}</p>                
+          </div>
+          <div class="salon-container">
+          <h3 class="salon-label">SERVICIO:</h3>
+          <p >{{cat.servicio_r}}</p>                
+          </div>
+          <div class="salon-container">
+          <h3 class="salon-label">ESP.:</h3>
+          <p >{{cat.especialista_r}}</p>                
+          </div>
+          <div >
+          <h3 class="salon-label">FECHA:</h3>
+          <!-- <p>{{ cat.fechahora_r }}</p> -->
+          <p>{{ convertirATextoFecha(cat.fechahora_r) }}</p>
+
+        </div>
+          <div >
+          <h3 class="salon-label">HORA:</h3>
+          <p>{{ convertirAHora2(cat.fechahora_r) }}</p>
+
+          <!-- <p>{{ convertirATextoFecha(cat.fechahora_r) }}</p> -->
+
+          <!-- <p>{{ cat.fechahora_r  }}</p> -->
+          </div>
+          <div >
+          <h3 class="salon-label">COMENTARIO:</h3>
+          <p >{{cat.cliente_comentario_r}}</p>       
+          <!-- <p >{{cat.id}}</p>             -->
+          </div>
+          <div class="image-container" >
+            <img src="/assets/reviewstar.jpg" alt="Logo de la aplicación" class="small-image" routerLink="/calificacion/{{cat.id}}" >
+          </div>
+              <!-- {{id}}             -->
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <div class="main " style="padding: 10px;"  >
+    <div class="catss" >
+      <h1 >CITAS AGENDADAS</h1>
+
+        <div class="cuadro" *ngFor="let cat of cats" >
+
+          <div class="lado lado-imagen"  [ngStyle]="{ backgroundImage: 'url('+cat.photo_r+')' }" >
+
+          </div>
+          
+          <div class="lado lado-texto">
+            
+            <div class="salon-container">
+                <p class="salon-label">SALÓN:</p>
+                <p >{{cat.salon_r}}</p>                
+            </div>
+            <div class="salon-container">
+            <p class="salon-label">SERVICIO:</p>
+            <p >{{cat.servicio_r}}</p>                
+            </div>
+            <div class="salon-container">
+            <p class="salon-label">ESP.:</p>
+            <p >{{cat.especialista_r}}</p>                
+            </div>
+            <div >
+            <p class="salon-label">FECHA:</p>
+          </div>
+            <div >
+            <p class="salon-label">HORA:</p>
+            </div>
+            <div >
+            <p class="salon-label">COMENTARIO:</p>
+            <p >{{cat.cliente_comentario_r}}</p>                
+            </div>
+          
+            <div class="image-container">
+                <img src="/assets/reviewstar.jpg" alt="Logo de la aplicación" class="small-image">
+              </div>
+              
+        
+          </div>
+
+        </div>
+    </div>
+  
+    <app-register></app-register> -->

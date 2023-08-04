@@ -1,0 +1,16 @@
+<div class="uno">
+  <!-- <p>Sesión: {{mail}}</p> -->
+  <h1 class="title" >CATEGORÍAS</h1>
+  <div class="button-grid">
+    <div class="card" *ngFor="let cat of cats" routerLink="/shops/{{cat.name}}/">
+      <div class="image"  [ngStyle]="{ backgroundImage: 'url('+cat.photo+')' }" (click)="onClickUpdate(cat)">
+      </div>
+      <div class="info">
+        <h4 class="letra">{{cat.name}}</h4>          
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

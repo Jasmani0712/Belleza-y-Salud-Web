@@ -1,0 +1,28 @@
+<div class="uno">
+    <div class="imagen">
+      <!-- <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" > -->
+            
+      <!-- </div> -->
+      <!-- {{id}} -->
+    </div>
+    <h1 class="title">CALIFICACIÓN</h1>
+
+        
+        <div class="grid-seccion2" >       
+          <div class="grid-item-seccion2" >         
+            <div class="card-store">
+              <div class="imagen">
+                <ngb-rating [max]="5" [readonly]="false" (rateChange)="onRateChange($event)" ></ngb-rating>        
+                <textarea rows="3" cols="40" type="text" placeholder="Califica tu servicio" [(ngModel)]="texto_calificacion"></textarea>
+
+                <div class="button-grid" >
+
+                    <button (click)="btn_calificar()">CALIFICAR</button>
+                </div>
+              </div>          
+            </div>
+          </div>
+        </div>
+      
+   
+  </div>   

@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado de categorias</span>
+            <button class="btn btn-dark btn-lg float-right" routerLink="/create-imagenes">Agregar</button>
+            <button class="btn btn-dark btn-lg float-right" routerLink="/app-new-place">Agregar Place</button>
+
+            <table class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th >Nombre</th>
+                    <th >Foto</th>
+                    <th >Foto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- <ul>
+                    <li class="text" *ngFor="let item of items$ | async">
+                      {{item.name}}
+                    </li>
+                  </ul> -->
+                  <tr *ngFor="let categoria of categorias">
+                    <td >{{categoria.Nombre}}</td>
+                    <!-- <td >{{categoria.Descripcion}}</td>
+                    <td >{{categoria.Foto}}</td> -->
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

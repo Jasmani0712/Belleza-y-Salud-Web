@@ -1,0 +1,25 @@
+<div class="uno">
+
+<div class="seccion" *ngFor="let resultado of resultados">
+    <!-- <img *ngIf="showText" src="/assets/infoblack.jpg"  /> -->
+
+    <h1 class="title">{{ resultado.nombre }}</h1>
+   
+    <p>{{ resultado.info }}</p>
+    <p *ngIf="showText">PRECIO: {{ resultado.precio }}</p>
+    <!-- <p *ngIf="!showText">PRECIO: {{ resultado.precio }}</p> -->
+    <!-- <p *ngIf="showText !== ''">PRECIO: {{ resultado.precio }}</p> -->
+
+    <p class="promo">{{ resultado.promo }}</p>
+
+    <!-- <h2>SALON</h2>       -->
+    <!-- <p>{{ resultado.shop }}</p> -->
+    <!-- <button (click)="toggleText()">Toggle Text</button> -->
+
+    <!-- <p *ngIf="showText">Texto a mostrar</p> -->
+    
+</div>
+
+    <!-- <h1>{{ data.param1 }}</h1> -->
+    <button mat-button [mat-dialog-close]="true">Cerrar</button>
+</div>

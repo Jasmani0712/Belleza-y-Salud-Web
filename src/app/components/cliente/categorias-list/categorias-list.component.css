@@ -1,0 +1,179 @@
+.uno{
+    margin: 250px; 
+    margin-top: 50px;
+
+}
+.button-grid {
+    margin-top: 40px;
+    display: grid;
+    /* display: flex;si importa para 3 o mas columnas */
+    /*flex-wrap: wrap; /*si importa para 3 o mas columnas*/
+    /* justify-content: center; no importa mucho creo */
+    grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+    gap: 40px; /* Espacio entre los botones */
+    
+}
+.button-grid .card {
+    /*width: 30.33%; /* Por defecto, 3 columnas si importa para 3 o mas columnas */
+    border: 2px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(247, 240, 250);  
+    color: rgb(183, 0, 255);
+    position: relative;
+    /* border: 1px solid transparent; Borde transparente */
+    padding: 0px; /* Espacio interno */
+    text-align: left; /* Alinear el texto al centro */
+    transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    cursor: pointer;
+
+
+}
+.button-grid .card:hover{
+    background-color: rgb(235, 185, 255); /* Cambiar el color de fondo al pasar el cursor */
+    /*color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+    /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+    border: 2px solid rgb(0, 0, 0); /* Borde rojo */
+}
+.button-grid .image {
+    background-size: 100% 100%;
+    /* background-size:  contain ; */
+
+    /* background-position: center; */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:100%;
+    border-radius: 20px 0px 0px 20px;
+
+}
+.button-grid .info {
+    padding: 50px 5px;
+    text-align: center;
+    /* font-size: 10px; */
+
+}
+.uno .title{
+    font-size: 36px!important;
+}
+.info .letra{
+    font-weight: 500;
+    /* font-size: 26px; */
+    /* font-size: 1px!important; */
+    /* color:aqua ; */
+}
+
+@media ( max-width: 1300px) {
+    .uno{
+        margin: 100px; 
+        margin-top: 40px;
+    }
+    .button-grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+        gap: 40px; /* Espacio entre los botones */    
+
+    }
+    .button-grid .image {
+        background-size: 100% 100%;
+
+        /* background-size:  contain ; */
+        background-position: left 20% 10%;
+
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .button-grid .info {
+        padding: 40px 1px;
+    }
+    .info .letra{
+        /* font-size: 2px; */
+        /* font-size: 1px!important; */
+        /* color:aqua ; */
+    }
+}
+
+@media ( max-width: 700px) {
+    .uno{
+        margin: 10px; 
+        margin-top: 40px;
+    }
+    .button-grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+        gap: 10px; /* Espacio entre los botones */    
+
+    }
+    .button-grid .image {
+        background-size: 100% 100%;
+
+        /* background-size:  contain ; */
+        background-position: left 20% 10%;
+
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .button-grid .info {
+        padding: 15px 1px;
+    }
+    .info .letra{
+        /* font-size: 2px; */
+        /* font-size: 0,1px!important; */
+        /* color:aqua ; */
+    }
+}
+
+@media ( max-width: 500px) {
+    .uno{
+        margin: 1px; 
+        margin-top: 30px;
+    }
+    .button-grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+        gap: 5px; /* Espacio entre los botones */    
+
+
+    }
+    .button-grid .card{
+        margin-bottom: 15px; /* Espacio debajo de cada botón */
+    }
+    .button-grid .image {
+        background-size: 100% 100%;
+
+        /* background-size:  contain ; */
+        background-position: left 20% 10%;
+
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .button-grid .info {
+        padding: 10px 1px;
+    }
+    .info .letra{
+        /* font-size: 2px; */
+        font-size: 10px;
+        /* color:blue ; */
+        font-weight: 500;
+
+        line-height: 1.5; /* Ajusta el espacio entre líneas al 150% del tamaño de fuente */
+
+    }
+}
+
+
+
+
+
+
+

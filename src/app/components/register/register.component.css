@@ -1,0 +1,95 @@
+.caja{
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    font-size: 30px!important;
+
+}
+.formulario{
+    
+
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; Opcional, ajusta la altura según tus necesidades */
+}
+.formulario2{
+    /* margin-left: 100px;
+    margin-right: 100px; */
+
+}
+.form{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding-left: 60px;   
+    padding-right: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 1px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(247, 240, 250); 
+
+}
+.form-control{
+    margin-top: 5px;
+    margin-bottom: 20px;
+  
+    box-shadow: 0px 12px 10px rgba(163, 163, 163, 0.3);
+
+}
+.btn {
+    margin-left:1px;
+    box-shadow: 0px 12px 10px rgba(163, 163, 163, 0.3);
+
+    border: 1px solid rgb(183, 0, 255);
+    color: rgb(183, 0, 255);
+    border-radius: 10px;
+    background-color: rgb(247, 240, 250);  
+    position: relative;
+    /* border: 1px solid transparent; Borde transparente */
+    padding: 10px; /* Espacio interno */
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center; /* Alinear el texto al centro */
+    transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+    
+    font-size: 16px!important;
+    font-weight: 500;
+
+}
+
+.btn:hover {
+    background-color: rgb(208, 88, 255); /* Cambiar el color de fondo al pasar el cursor */
+    color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+    /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+    border: 1px solid rgb(0, 0, 0); /* Borde rojo */
+}
+
+.btn-google{    
+    color: rgb(67, 67, 67);
+    border-radius: 20px;
+    /* background-color: rgb(255, 255, 255);   */
+    position: relative;
+    border: 1px solid transparent; 
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Alinear el texto al centro */
+    transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+    font-size: 16px!important;
+    font-weight: 500;
+    box-shadow: 0px 12px 10px rgba(163, 163, 163, 0.3);
+    margin-bottom: 30px;
+}
+
+.btn-google:hover {
+    border: 1px solid rgb(183, 0, 255);
+
+    color: rgb(183, 0, 255); /* Cambiar el color del texto al pasar el cursor */
+    /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+}
+.btn-google img {
+    margin-right: 5px;
+  }

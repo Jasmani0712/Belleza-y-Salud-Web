@@ -1,0 +1,46 @@
+.uno{
+    margin: 10px; 
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 20px; */
+    flex-direction: column;
+    }
+
+  .uno .title p{
+    font-size: 36px!important;
+    /* margin: 10px; */
+
+  }
+   p{
+   
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+
+  }
+  .promo{
+    color: gold;
+  }
+
+  .seccion{
+    margin: 10px;
+    /* margin-top: 50px; */
+
+    /* background-color: brown; */
+  }
+
+  @media ( max-width: 500px) {
+    p{
+   
+      margin-left: 20px;
+      margin-right: 20px;
+   
+  
+    }
+  }

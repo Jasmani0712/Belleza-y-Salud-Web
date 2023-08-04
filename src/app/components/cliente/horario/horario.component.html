@@ -1,0 +1,24 @@
+<div class="uno">
+  <div class="imagen">
+    <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >     
+    </div>
+    {{id}}
+  </div>
+<div class="main "  >
+  <div class="cats " >
+    <h1 class="title">HORARIOS</h1>
+
+      <!-- <div class="cat" *ngFor="let cat of cats" routerLink="/fecha/{{cat.name_especialista}}/" style="cursor: pointer;"> -->
+
+        <!-- <div class="image"  [ngStyle]="{ backgroundImage: 'url('+cat.photo+')' }" ></div> -->
+        <div class="info">
+          <div class="button-container">
+              <button [disabled]="horaactual > hora  && fechastring===fechaactual" class="button" *ngFor="let hora of horasActualizadas" routerLink="/confirmacion/{{id}}/{{servicio}}/{{especialista}}/{{fecha}}/{{hora}}/">
+                <!-- <button class="button" *ngFor="let hora of horasActualizadas" routerLink="/shops/qwe"> -->
+                  {{ hora }}
+              </button>               
+          </div>  
+        </div>
+  </div>
+</div>
+</div>

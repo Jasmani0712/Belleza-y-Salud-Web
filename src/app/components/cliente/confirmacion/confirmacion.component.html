@@ -1,0 +1,87 @@
+<div class="uno">
+    <div class="imagen">
+        <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >    
+        </div>
+        {{id}}
+      </div>
+<h1 class="title">CONFIRMA TU RESERVA</h1>
+<div class="main"  >
+    <!-- <form [formGroup]="formulario" (ngSubmit)="onSubmit()"> -->
+        <form [formGroup]="formulario" (ngSubmit)="searchByField3(especialista,this.fechahora);
+        ">
+
+<div class="form">
+        <div class="mb-3">
+            <label class="form-label">SALÓN:</label>
+            <p  >{{id}}</p>
+
+            <!-- <input type="text" class="form-control" formControlName="name"> -->
+        </div>
+        <div class="mb-3">
+            <label class="form-label">SERVICIO:</label>
+            <p  >{{servicio}}</p>
+
+            <!-- <textarea class="form-control" cols="30" rows="10" formControlName="description"></textarea> -->
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PROFESIONAL:</label>
+            <p  >{{especialista}}</p>
+
+            <!-- <input type="text" class="form-control" formControlName="latitude"> -->
+        </div>
+        <div class="mb-3">
+            <label class="form-label">FECHA:</label>
+            <!-- <p  >{{fecha  }}</p> -->
+            <p>{{ convertirAFechaFormateada(fecha) }}</p>
+
+            <!-- <input type="text" class="form-control" formControlName="longitude"> -->
+        </div>
+        <div class="mb-3">
+            <label class="form-label">HORA:</label>
+            <p  >{{hora}}</p>
+
+            <!-- <input type="text" class="form-control" formControlName="image"> -->
+        </div>
+        <div class="mb-3">
+            <label class="form-label">NOMBRE:</label>
+            <!-- <p>{{fecha}}</p> -->
+
+            <input type="text"  formControlName="cliente_r">
+            <div class="alert alert-danger" *ngIf="formulario.get('cliente_r')?.errors">El campo es requerido.</div>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">CELULAR:</label>
+            <!-- <p>{{fecha}}</p> -->
+
+            <!-- <input type="text"  formControlName="celular_r"> -->
+            <input type="text" formControlName="celular_r">
+            <div class="alert alert-danger" *ngIf="formulario.get('celular_r')?.errors">El campo es requerido.</div>
+
+            <div *ngIf="formulario.get('celular_r')?.invalid && (formulario.get('celular_r')?.dirty || formulario.get('celular_r')?.touched)">
+                <!-- <div class="alert alert-danger" *ngIf="formulario.get('celular_r')?.errors">El campo es requerido.</div> -->
+                <div class="alert alert-danger" *ngIf="formulario.get('celular_r')?.errors">Solo se permiten números.</div>
+                <p class="alert alert-danger" *ngIf="formulario.controls['celular_r'].hasError('minlength')">
+                    El numero telefónico debe ser<br> mayor a 7 caracteres y menor a 12 caracteres.
+                </p>
+            </div>
+ 
+        </div>
+        <div class="mb-3">
+            <label class="form-label">COMENTARIOS Y DESEOS:</label>
+            <!-- <p>{{fecha}}</p> -->
+
+            <input type="text" formControlName="cliente_comentario_r">
+        </div>
+        <input style="  display: flex;
+        justify-content: center;
+        align-items: center;
+        " type="submit" value="CONFIRMAR" class="btn" [disabled]="!formulario.valid" >
+
+        <!-- <button onclick="onSubmit()" type="submit" class="btn btn-primary" [disabled]="!formulario.valid">CONFIRMAR</button> -->
+
+</div>    
+</form>
+    
+    </div>
+</div>

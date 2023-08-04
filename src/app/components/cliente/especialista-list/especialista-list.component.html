@@ -1,0 +1,27 @@
+<div class="uno"  >
+  <div class="imagen">
+    <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >    
+    </div>
+    {{id}}
+  </div>
+  <h1 class="title">ESPECIALISTAS</h1>
+    <div class="button-grid" >   
+    
+      <div class="card" *ngFor="let cat of cats" routerLink="/fecha/{{id}}/{{servicio}}/{{cat.name_especialista}}/">
+          <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+cat.photo+')' }" >
+            <!-- <p class="promo">{{resultado.promo}}</p> -->
+          </div>
+          <div class="info">
+            
+              <h2>{{cat.name_especialista}}</h2>
+              <!-- <p >{{resultado.descripcion}}/> -->
+              <!-- <h3 >Dirección:</h3> -->
+              <p>{{cat.description}}</p>
+              <!-- <h3>Días de atención:</h3> -->
+              <!-- <p>{{resultado.attention_days}}</p> -->
+
+              <!-- {{id}}             -->
+          </div>
+      </div>
+    </div>
+  </div>

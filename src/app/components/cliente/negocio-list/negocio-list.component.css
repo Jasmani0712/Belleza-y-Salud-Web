@@ -1,0 +1,431 @@
+.uno{
+  margin: 200px; 
+  margin-top: 20px;
+}
+
+/* IMAGEN SHOP */
+.imagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+.image {    
+  background-size:  cover ;    
+  background-repeat: no-repeat;
+  width: 200px;
+  height:200px;      
+  border: 1px solid rgb(183, 0, 255);
+  border-radius: 20px;
+  background-color: rgb(247, 240, 250);  
+  color: rgb(183, 0, 255);
+  margin-bottom: 5px;
+}
+
+/* BOTONES MENU */
+.button-container{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%; /* Distribución en 3 columnas */
+  grid-gap: 2px 1px; /* Espacio entre los divs */
+  margin-bottom: 30px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(212, 112, 255);  
+  border: 2px solid rgb(0, 0, 0); /* Borde rojo */
+  /* padding: 2px; */
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4); /* Aplica una sombra al botón */
+}
+.button-container button{
+  color: white;
+    border: 1px solid transparent; 
+    border-radius: 30px;
+  background-color: rgb(212, 112, 255);  
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
+}
+.button-container button:hover{
+  background-color: rgb(191, 29, 255); /* Cambiar el color de fondo al pasar el cursor */
+  /*color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+  /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+  /*border: 2px solid rgb(0, 0, 0); /* Borde rojo */
+}
+.button-container button:focus {
+  outline: none; /* Elimina el contorno predeterminado del botón */
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4); /* Aplica una sombra al botón */
+}
+
+/* SERVICIOS */
+.button-grid {
+  margin-top: 40px;
+  display: grid;
+  /* display: flex;si importa para 3 o mas columnas */
+  /*flex-wrap: wrap; /*si importa para 3 o mas columnas*/
+  /*justify-content: center; /*no importa mucho creo*/
+  grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+  gap: 30px; /* Espacio entre los botones */
+}
+.grid-container {
+  border-radius: 20px;
+  border: 2px solid rgb(183, 0, 255);
+  background-color: rgb(247, 240, 250);  
+  position: relative;
+  text-align: center; /* Alinear el texto al centro */
+  transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+  display: grid;
+  grid-template-columns: 53% 15% 17%; /* Distribución en 3 columnas */
+  grid-gap: 20px 1px; /* Espacio entre los divs */
+  margin-bottom: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.grid-item {
+  border-radius: 20px;
+  /* background-color: rgb(218, 171, 238);   */
+
+  color: rgb(183, 0, 255);
+  padding: 20px;
+}
+.with img {
+  cursor: pointer;
+
+  width: 30px; /* Ancho deseado para la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+.with button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(183, 0, 255);
+  border-radius: 20px;
+  background-color: rgb(198, 67, 255);  
+  color: white;
+  padding: 10px; /* Espacio interno */
+  text-align: center; /* Alinear el texto al centro */
+  transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+  
+  font-weight: 500;
+}
+.with button:hover{
+  background-color: rgb(191, 29, 255); /* Cambiar el color de fondo al pasar el cursor */
+  /*color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+  /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+  border: 2px solid rgb(0, 0, 0); /* Borde rojo */
+}
+
+/* SECCION INFO */
+.grid-seccion2{
+  border-radius: 20px;
+  border: 2px solid rgb(183, 0, 255);
+  /* background-color: rgb(247, 240, 250);   */
+  position: relative;
+  text-align: justify; /* Alinear el texto al centro */
+  transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+  display: grid;
+  margin-bottom: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.grid-item-seccion2 {
+  border-radius: 20px;
+  /* background-color: rgb(218, 171, 238);   */
+
+  color: rgb(183, 0, 255);
+  padding: 20px;
+  margin: 5px;
+}
+.btnqr{
+  border: 1px solid rgb(183, 0, 255);
+  border-radius: 20px;
+  background-color: rgb(247, 240, 250);  
+  color: rgb(183, 0, 255);
+  /* margin-top: 10px; */
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: row;
+
+}
+.social-icons img{
+  cursor: pointer;
+  width: 50px; /* Ancho deseado para la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right:40px; /* Espacio entre la imagen y el texto */
+  margin-left: 40px;
+}
+.imagemap {    
+  background-size:  cover ;    
+  background-repeat: no-repeat;
+  width: 300px;
+  height:300px;      
+  border: 1px solid rgb(183, 0, 255);
+  border-radius: 20px;
+  background-color: rgb(247, 240, 250);  
+  color: rgb(183, 0, 255);
+  margin-bottom: 5px;
+}
+/* STORE */
+.card-store{
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4); /* Aplica una sombra al botón */
+
+  padding: 15px;
+}
+/* RESEÑAS */
+ngb-rating{
+  color: gold;
+  font-size: 30px;
+
+}
+.contenido_reseña{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+
+  flex-direction: column;
+}
+.fila_reseña{
+  display: flex;
+  flex-direction: row;
+}
+.card-resena{
+  border: 1px solid rgb(183, 0, 255);
+  background-color: rgb(247, 240, 250);  
+  border-radius: 20px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4); /* Aplica una sombra al botón */
+  margin: 10px;
+  /* padding: 15px; */
+}
+.fecha{
+  /* background-color: yellowgreen; */
+  color: rgb(145, 145, 145)!important;
+  margin-left: 20px;
+
+}
+   
+    /* .uno .title{
+        font-size: 36px!important;
+    }
+     */
+h2,p{color: black!important;}
+h3{    font-weight: 500;}
+.promo{
+    background-color: gold!important;
+    border-radius: 0px 20px 20px 0px;
+    /* padding-right: 100px; */
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 40%;
+  
+}
+    @media ( max-width: 1300px) {
+        .uno{
+            margin: 20px; 
+            margin-top: 40px;
+        }
+        .grid-container {
+
+          grid-template-columns: 35% 15% 15%; /* Distribución en 3 columnas */
+      
+        }
+        .grid-item {         
+          padding: 5px;
+        }
+
+        
+        .button-grid {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+            gap: 20px; /* Espacio entre los botones */    
+    
+        }
+        .button-grid .image {
+            background-size: 100% 100%;
+    
+            /* background-size:  contain ; */
+            background-position: left 20% 10%;
+    
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0px 0px 20px;
+        }
+        .button-grid .info {
+            padding: 10px 10px;
+        }
+        .info .letra{
+            /* font-size: 2px; */
+            /* font-size: 1px!important; */
+            /* color:aqua ; */
+        }
+
+     
+    }
+    
+    @media ( max-width: 700px) {
+        .uno{
+            margin: 10px; 
+            margin-top: 40px;
+        }
+        .grid-container {
+
+          grid-template-columns: 65% 5% 30%; /* Distribución en 3 columnas */
+
+        }
+        .grid-item {         
+          padding: 5px;
+          
+        }
+        .button-grid {
+            margin-top: 30px;
+            display: contents;
+            /*grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+            gap: 10px; /* Espacio entre los botones */    
+    
+        }
+        .button-grid .image {
+            background-size: 100% 100%;
+    
+            /* background-size:  contain ; */
+            background-position: left 20% 10%;
+    
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0px 0px 20px;
+        }
+        .button-grid .info {
+            padding: 5px 3px;
+        }
+        .info .letra{
+            /* font-size: 2px; */
+            /* font-size: 0,1px!important; */
+            /* color:aqua ; */
+            
+        }
+        h3,h2 {
+            line-height: 1.5; /* Ajusta el espacio entre líneas al 150% del tamaño de fuente */
+    
+            margin-top: 1px; /* Espacio superior del párrafo */
+            margin-bottom: 1px; /* Espacio inferior del párrafo */
+            
+    
+          }
+          .social-icons img{
+            cursor: pointer;
+            width: 50px; /* Ancho deseado para la imagen */
+            height: auto; /* Altura automática para mantener la proporción */
+            margin-right:20px; /* Espacio entre la imagen y el texto */
+            margin-left: 20px;
+          }
+    }
+    
+    @media ( max-width: 500px) {
+        .uno{
+            margin: 10px; 
+            margin-top: 30px;
+    
+        }
+        .grid-container {
+
+          grid-template-columns: 45% 15% 30%; /* Distribución en 3 columnas */
+
+        }
+        .grid-item {         
+          padding: 2px;
+          
+        }
+        .button-grid {
+            /*grid-template-columns: 1fr; /* Cambia a una sola columna */
+    
+            margin-top: 20px;
+            /* display: grid; */
+            /*grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+            gap: 5px; /* Espacio entre los botones */    
+    
+            display: contents;
+            /*grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+        }
+        .button-grid .card{
+            margin-bottom: 15px; /* Espacio debajo de cada botón */
+            grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+    
+        }
+        .select-city{
+    
+            grid-column: span 2; /*Ocupar dos columnas */
+            text-align: center; /* Alinear el texto al centro */
+            width: 100%; /* Ancho del botón al 50% */
+            margin: 0 auto; /* Centrar horizontalmente */
+            margin-bottom: 20px;
+        }
+        .button-grid .image {
+            background-size: 100% 100%;
+    
+            /* background-size:  contain ; */
+            background-position: left 20% 10%;
+    
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0px 0px 20px;
+        }
+        .button-grid .info {
+            padding: 10px 5px;
+        }
+        .info {
+            /* font-size: 2px; */
+            /* font-size: 10px; */
+            /* color:blue ; */
+            /* font-weight: 500; */
+    
+            line-height: 1.5; /* Ajusta el espacio entre líneas al 150% del tamaño de fuente */
+    
+        }
+        h3,h2 {
+            margin-top: 1px; /* Espacio superior del párrafo */
+            margin-bottom: 1px; /* Espacio inferior del párrafo */
+            
+    
+          }
+          .social-icons img{
+            cursor: pointer;
+            width: 40px; /* Ancho deseado para la imagen */
+            height: auto; /* Altura automática para mantener la proporción */
+            margin-right:20px; /* Espacio entre la imagen y el texto */
+            margin-left: 20px;
+          }
+          .imagemap {    
+          
+            width: 200px;
+            height:200px;      
+          
+          }
+    }
+    
+    
+    
+    
+    

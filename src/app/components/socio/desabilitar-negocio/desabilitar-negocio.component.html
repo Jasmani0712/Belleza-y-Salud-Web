@@ -1,0 +1,37 @@
+<div class="uno">
+    <div class="imagen">
+        <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >    
+        </div>
+        {{id}}
+    </div>
+    <h1 class="title">HABILITAR/DESHABILITAR NEGOCIO</h1>
+    <div class="main"  >
+      <h2 class="text">{{estadofecha}}</h2>
+
+      <div class="button-grid">
+
+        <mat-form-field>
+            <input matInput [disabled]="hab_btn1" [matDatepicker]="datepicker" [matDatepickerFilter]="dateFilter" placeholder="Fecha Inicio de Cierre" (dateChange)="onDateChange($event)">
+            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input matInput [disabled]="hab_btn1" [matDatepicker]="datepicker2" [matDatepickerFilter]="dateFilter" placeholder="Fecha Fin de Cierre" (dateChange)="onDateChange2($event)">
+            <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker2></mat-datepicker>
+          </mat-form-field>
+        </div>  
+          <div class="button-container">
+            <button class="button" (click)="btn_deshabilitar()" [disabled]="hab_btn1">
+              {{ btn }}
+            </button>
+          </div>
+          <div class="button-container">
+            <button class="button" (click)="btn_habilitar()" [disabled]="hab_btn2">
+              Habilitar Negocio Ahora
+            </button>
+          </div>
+      
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="uno">
+    <!-- <div class="imagen"  *ngFor="let resultadosShop of resultadosShop">
+        <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultadosShop.foto_shop+')', }" >
+              
+        </div>
+    
+    </div> -->
+    <!-- <p>Sesión: {{mail}}</p> -->
+    <div class="button-grid">
+        <button routerLink="/add-store/{{id}}">AÑADIR PRODUCTOS</button>
+        <button routerLink="/add-galery/{{id}}">AÑADIR IMAGENES</button>
+        <button routerLink="/delete-store/{{id}}">ELIMINAR PRODUCTOS</button>
+        <button routerLink="/delete-galery/{{id}}">ELIMINAR IMAGENES</button>
+        <button routerLink="/desabilitar-negocio/{{id}}">DESHABILITAR NEGOCIO</button>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+export interface ShopInterface {
+    id?:string;
+    name:string;
+    adress:string;
+    attention_days:string;
+    category:Array<any>;
+    cel:string;
+    city:string;
+    description:string;
+    face:string;
+    hora_fin:string;
+    hora_inicio:string;
+    insta:string;
+    qr:string;
+    map:string;
+    map_link:string;
+    photo:string;
+    tiktok:string;
+    visible:boolean
+}

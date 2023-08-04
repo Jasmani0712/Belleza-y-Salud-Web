@@ -1,0 +1,163 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    flex-wrap: wrap;
+  }
+  
+  .button {
+    border: 3px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(237, 209, 255);
+    border-radius: 20px;
+    color: #000;
+    /* padding: 10px 20px; */
+    /* margin: 10px; */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    flex: 1;
+    max-width: 200px;
+    padding: 20px;
+    margin: 5px;
+  }
+  
+  .button:hover {
+    background-color: #c32cff;
+  }
+  .button[disabled]{
+    background-color: #cecece;
+    border: 3px solid rgb(0, 0, 0);
+
+  }
+  
+  /* @keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  } */
+  
+  .button.animated {
+    animation: buttonAnimation 1s infinite;
+  }
+  
+ 
+  .uno{
+    margin: 200px; 
+    margin-top: 50px;
+    }
+    .imagen{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-direction: column;
+
+    }
+    .image {    
+        background-size:  cover ;    
+        background-repeat: no-repeat;
+        width: 100px;
+        height:100px;      
+        border: 1px solid rgb(183, 0, 255);
+        border-radius: 20px;
+        background-color: rgb(247, 240, 250);  
+        color: rgb(183, 0, 255);
+        margin-bottom: 5px;
+
+      }
+
+  .uno .title{
+    font-size: 36px!important;
+  }
+  @media ( max-width: 1300px) {
+    .uno{
+      margin: 100px; 
+      margin-top: 50px;
+      }
+    .button {
+      flex-basis: 20%;
+    }
+  }
+  @media ( max-width: 700px) {
+    .uno{
+      margin: 10px; 
+      margin-top: 50px;
+      }
+    .button {
+      flex-basis: 20%;
+    }
+  }
+
+  @media ( max-width: 500px) {
+    .button {
+      flex-basis: 20%;
+    }
+    .uno{
+        margin: 40px; 
+        margin-top: 30px;
+
+    }
+    .button-grid {
+        /*grid-template-columns: 1fr; /* Cambia a una sola columna */
+
+        margin-top: 20px;
+        /* display: grid; */
+        /*grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+        gap: 5px; /* Espacio entre los botones */    
+
+        display: contents;
+        /*grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+    }
+    .button-grid .card{
+        margin-bottom: 15px; /* Espacio debajo de cada botón */
+        grid-template-columns: 1fr 1fr; /*Dos columnas de ancho igual */
+
+    }
+    .select-city{
+
+        grid-column: span 2; /*Ocupar dos columnas */
+        text-align: center; /* Alinear el texto al centro */
+        width: 100%; /* Ancho del botón al 50% */
+        margin: 0 auto; /* Centrar horizontalmente */
+        margin-bottom: 20px;
+    }
+    .button-grid .image {
+        background-size: 100% 100%;
+
+        /* background-size:  contain ; */
+        background-position: left 20% 10%;
+
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .button-grid .info {
+        padding: 50px 5px;
+    }
+    .info {
+        /* font-size: 2px; */
+        /* font-size: 10px; */
+        /* color:blue ; */
+        /* font-weight: 500; */
+
+        line-height: 1.5; /* Ajusta el espacio entre líneas al 150% del tamaño de fuente */
+
+    }
+    h3,h2 {
+        margin-top: 1px; /* Espacio superior del párrafo */
+        margin-bottom: 10px; /* Espacio inferior del párrafo */
+        
+
+      }
+}
+

@@ -1,0 +1,56 @@
+<div class="uno">
+    <div class="imagen">
+        <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >    
+        </div>
+        <!-- {{id}} -->
+      </div>
+<h1 class="title">GALERÍA</h1>
+<div class="main"  >
+    <!-- <form [formGroup]="formulario" (ngSubmit)="onSubmit(url)"> -->
+    <form [formGroup]="formulario" >
+
+<div class="form">
+       
+        <div class="mb-3">
+            <label class="form-label">TÍTULO:</label>
+            <!-- <p>{{fecha}}</p> -->
+
+            <input type="text"  formControlName="title">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">DESCRIPCIÓN:</label>
+            <!-- <p>{{fecha}}</p> -->
+
+            <input type="text"  formControlName="description">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">IMAGEN:</label>
+            <!-- <p>{{fecha}}</p> -->
+            <div class="button-grid" >
+                <!-- <input type="file"> -->
+                
+                <label class="archivo" >Seleccionar Archivo
+                    <input type="file" (change)="onFileSelected($event)" style="display:none;">
+                </label>
+                <!-- <button (click)="btn_cargar_img()">CARGAR IMAGEN</button> -->
+                <div class="imagen">
+                    <!-- <img class="image small-image" [src]="image" *ngFor="let image of images" > -->
+                    <img class="small-image" *ngIf="imageUrl" [src]="imageUrl" alt="Imagen subida" />
+
+                </div>
+
+  
+               
+            </div>
+        </div>
+        <!-- <input type="submit" value="GUARDAR IMAGEN" class="btn"  (click)="onSubmit()" [disabled]="!selectedImage"> -->
+
+        <input type="submit" value="GUARDAR IMAGEN" class="btn" (click)="uploadImage($event)" [disabled]="!selectedImage">
+        <!-- <button (click)="uploadImage($event)">AD</button> -->       
+        <!-- <button (click)="uploadImage($event)" [disabled]="!selectedImage">Guardar</button> -->
+        
+</div>    
+</form>
+    
+    </div>
+</div>

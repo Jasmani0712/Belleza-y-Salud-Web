@@ -1,0 +1,92 @@
+<div *ngIf="loading" class="loading-overlay">
+  <!-- Agrega aquí el spinner de carga o mensaje de carga -->
+  <div class="loading-spinner">
+    Cargando...
+  </div>
+</div>
+
+<!-- Aquí coloca el contenido normal de tu página -->
+
+<div class="uno">
+  <div class="imagen">
+    <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >     
+    </div>
+    {{id}}
+  </div>
+  <h1 class="title" >SELECCIONA FECHA</h1>
+  <!-- <input type="text" #datepickerInput> -->
+  <div class="container mat-card" >
+
+    <!-- <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]="selected" [dateClass]="dateClassCallback" routerLink="/horario/{{id}}/{{servicio}}/{{especialista}}/{{selected}}"></mat-calendar>
+    </mat-card>
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="selected" [dateClass]="dateClassCallback"></mat-calendar>
+    </mat-card>
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="selected" [dateFilter]="dateFilterCallback2" routerLink="/horario/{{id}}/{{servicio}}/{{especialista}}/{{selected}}"></mat-calendar>
+    </mat-card> -->
+    <!-- <mat-card class="demo-inline-calendar-card" >
+      <mat-calendar  [dateFilter]="dateFilterCallback"  [(selected)]="selected" routerLink="/horario/{{id}}/{{servicio}}/{{especialista}}/{{selected}}"></mat-calendar>
+      <mat-datepicker #datepicker ></mat-datepicker>
+    </mat-card> -->
+
+
+
+
+
+    <!-- <mat-card class="demo-inline-calendar-card" >
+      <mat-calendar [(selected)]="selected" routerLink="/horario/{{id}}/{{servicio}}/{{especialista}}/{{selected}}" [dateFilter]="calendarioHabilitado  ? dateFilter : null" ></mat-calendar>
+    </mat-card> -->
+
+
+
+
+    <!-- <mat-form-field >
+      <input matInput [matDatepicker]="datepicker" [matDatepickerFilter]="dateFilter" placeholder="Elige una fecha" (dateChange)="onDateChange($event)"> 
+       <input matInput [matDatepicker]="datepicker" [matDatepickerFilter]="dateFilter"  > 
+
+      <mat-datepicker-toggle matSuffix [for]="datepicker" ></mat-datepicker-toggle>
+      <mat-datepicker #datepicker ></mat-datepicker>
+    </mat-form-field> -->
+ 
+
+    
+    <ng-container *ngIf="view === 'month'">
+      <div class="cal-month-view">
+        <mwl-calendar-month-view
+          [viewDate]="viewDate"
+          [events]="events"
+          (viewDateChange)="onViewDateChange($any($event))"
+        ></mwl-calendar-month-view>
+      </div>
+    </ng-container>
+    
+    
+<!--   
+    <ng-container *ngIf="view === 'month'">
+      <div class="cal-month-view">
+        <mwl-calendar-month-view
+          [viewDate]="viewDate"
+          (viewDateChange)="onViewDateChange($event)"
+        ></mwl-calendar-month-view>
+      </div>
+    </ng-container> -->
+    
+    
+
+
+
+    
+    <!-- <mat-card class="demo-inline-calendar-card">
+      <mat-calendar   routerLink="/horario/{{id}}/{{servicio}}/{{especialista}}/{{selected}}"></mat-calendar>
+    </mat-card> -->
+    
+    <!-- <mat-card class="demo-inline-calendar-card">
+      <mat-calendar #datepickerInput (dateInput)="validateDate($event)" [(selected)]="selected"></mat-calendar>
+    </mat-card> -->
+    
+    
+  </div>
+  <!-- <p>Selected date: {{selected}}</p> -->
+</div>

@@ -1,0 +1,29 @@
+<div class="uno"  >
+  <h1 class="title">CENTROS B&S</h1>
+    <div class="button-grid" >   
+      <select class="select-city" [(ngModel)]="selectedValue" (change)="obtenerDocumentos()" >
+        <!-- <option [value]="null" disabled selected>-- Seleccionar Ciudad--</option> -->
+          <!-- opciones -->
+          <option *ngFor="let ciudad of ciudades" [value]="ciudad.value"  >
+            {{ciudad.viewValue}}
+          </option>      
+      </select>
+      <div [ngClass]="{ 'mi-div-desabilitado': resultado.deshabilitado }" class="card" *ngFor="let resultado of resultados" routerLink="/?id_shop={{resultado.nombre}}"  >
+          <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultado.foto+')' }" >
+            <p class="promo" *ngIf="resultado.promo">{{resultado.promo}}</p>
+          </div>
+          <div class="info">
+            
+              <h2>{{resultado.nombre}}</h2>
+              <!-- <h2>{{resultado.habilitado}}</h2> -->
+              <!-- <p >{{resultado.descripcion}}/> -->
+              <h3 >Dirección:</h3>
+              <p>{{resultado.adress}}</p>
+              <h3>Días de atención:</h3>
+              <p>{{resultado.attention_days}}</p>
+
+              <!-- {{id}}             -->
+          </div>
+      </div>
+    </div>
+  </div>

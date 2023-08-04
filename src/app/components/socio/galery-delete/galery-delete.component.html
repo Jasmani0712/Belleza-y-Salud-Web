@@ -1,0 +1,24 @@
+<div class="uno">
+    <div class="imagen">
+        <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >           
+        </div>
+        {{id}}
+    </div>
+    <div class="grid-seccion2" >       
+    <div class="grid-item-seccion2" *ngFor="let resultadosImages of resultadosImages">         
+      <div class="card-store">
+        <div class="image-container">
+          <img src="/assets/iconmonstr-x-mark-square-lined.svg" alt="Logo de la aplicación" class="small-image" (click)="eliminar_image(resultadosImages.id,resultadosImages.name)">
+        </div>
+        <div class="imagen">
+          <!-- <a (click)="validariconos(resultadosShop.ubicacion_link,'link de ubicación')" [attr.href]="resultadosShop.ubicacion_link" target="_blank">       -->
+            <div class="imagemap" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultadosImages.foto+')' }" ></div>
+          <!-- </a>             -->
+          <h3>{{resultadosImages.title}}</h3>
+          <p>{{resultadosImages.descripcion}}</p>
+          <!-- <h2>{{resultadosImages.precio}}</h2> -->
+        </div>          
+      </div>
+    </div>
+    </div>
+</div>

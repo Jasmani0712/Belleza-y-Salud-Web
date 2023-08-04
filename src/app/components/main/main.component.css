@@ -1,0 +1,40 @@
+.uno{
+    margin: 15px; 
+    margin-top: 50px;
+}
+.button-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+    gap: 15px; /* Espacio entre los botones */    
+}
+
+.button-grid button {
+    border: 2px solid rgb(183, 0, 255);
+    border-radius: 20px;
+    background-color: rgb(247, 240, 250);  
+    position: relative;
+    /* border: 1px solid transparent; Borde transparente */
+    padding: 30px; /* Espacio interno */
+    text-align: center; /* Alinear el texto al centro */
+    transition: all 0.5s ease; /* Transición suave para todas las propiedades */
+    
+    font-size: 16px!important;
+    font-weight: 500;
+
+}
+
+.button-grid button:hover {
+    background-color: rgb(208, 88, 255); /* Cambiar el color de fondo al pasar el cursor */
+    color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+    /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
+    border: 2px solid rgb(0, 0, 0); /* Borde rojo */
+}
+  
+.centered {
+    grid-column: span 2; /* Ocupar dos columnas */
+    text-align: center; /* Alinear el texto al centro */
+    width: 50%; /* Ancho del botón al 50% */
+    margin: 0 auto; /* Centrar horizontalmente */
+    
+}

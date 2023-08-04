@@ -1,0 +1,34 @@
+<div class="main bg-info" style="padding: 70px;"  >
+<!-- <a href="https://chat.openai.com/c/f6c99d30-8525-43c0-97d2-171217a1fdd4"> -->
+<div class="places" >
+    <div class="place" *ngFor="let place of places" >
+      <div class="image"  [ngStyle]="{ backgroundImage: 'url('+place.image+')' }" (click)="onClickUpdate(place)"></div>
+      <div class="info">
+            <h4>{{place.name}}</h4>
+            <p>{{place.description}}</p>
+            <p>Coordenadas: {{place.latitude}} / {{place.longitude}}</p>
+            <button class="btn btn-outline-danger" (click)="onClickDelete(place)">Borrar</button>
+            <button class="btn btn-outline-danger" (click)="onClickUpdate(place)">Editar</button>
+            {{id}}
+            <button class="btn btn-outline-danger" (click)="pasarDatos(false)">Disminuir</button>
+            <button class="btn btn-outline-danger" (click)="pasarDatos(true)">Incrementar</button>
+
+<a href="" routerLink="/main">
+  <button class="btn btn-outline-danger" >ir</button>
+
+</a>
+        </div>
+    </div>
+</div>
+<!-- </a> -->
+<div class="border border-danger">
+
+    <input type="file" (change)="uploadImage($event)">
+  
+    <div class="images ">
+      <img [src]="image" *ngFor="let image of images" width="200">
+    </div>
+  </div>
+ 
+</div>
+<!-- <app-register></app-register> -->

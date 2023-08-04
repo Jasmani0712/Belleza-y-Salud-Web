@@ -1,0 +1,40 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>Agregar Imagen
+                        <div class="spinner-border float-right" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <div *ngIf="loading" class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                          </div>
+                    </h3>
+                    <span *ngIf="submitted && createImagen.invalid" class="badge badge-danger">TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+                    <form action="" class="mt-4" [formGroup]="createImagen" (ngSubmit)="agregarImagen()">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" 
+                                formControlName="Nombre" placeholder="Nombre">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control"
+                                formControlName="Foto" placeholder="Foto">
+                            </div>
+                        </div>
+                       <input type="text" class="form-control form-control-lg mt-3" formControlName="Descripcion" placeholder="Descripcion"> 
+                        <!-- <input type="text" class="form-control form-control-lg mt-3" placeholder="Salario"> -->
+                        <div class="mt-3">
+                            <button type="text" class="btn btn-secondary btn-lg mr-3" routerLink="/list-categorias">Volver</button>
+                            <button type="text" class="btn btn-secondary btn-lg mr-3" >Agregar</button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

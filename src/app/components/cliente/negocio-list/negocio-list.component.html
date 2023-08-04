@@ -1,0 +1,135 @@
+<div class="uno">
+  <div class="imagen">
+    <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+foto_shop+')', }" >
+          
+    </div>
+    {{id}}
+  </div>
+
+
+  
+  
+    <div class="button-container">
+        <button (click)="toggleSection(1)" [class.active]="selectedSection === 1" (click)="selectButton(1)">Servicios</button>
+        <button (click)="toggleSection(2)" [class.active]="selectedSection === 2">Info</button>
+        <button (click)="toggleSection(3)" [class.active]="selectedSection === 3">Tienda</button>
+        <button (click)="toggleSection(4)" [class.active]="selectedSection === 2">Galería</button>
+        <button (click)="toggleSection(5)" [class.active]="selectedSection === 3">Reseñas</button>
+    </div>
+      
+    <div *ngIf="selectedSection === 1">
+      <!-- <h1 class="title">SERVICIOS</h1>   -->
+      <div class="button-grid" >
+        <div class="grid-container"  *ngFor="let resultados of resultados" (click)="getservicesinfo(resultados.nombre)" >       
+          <div class="grid-item">        
+            <h4 >{{resultados.nombre}}</h4>        
+          </div>
+          <div class="grid-item  with" >
+              <img (click)="openDialog(id,resultados.nombre)"  src="/assets/infoblack.jpg"  *ngIf="resultados.mostrar_info"/>
+          </div>
+          <div class="grid-item with">
+            <!-- <button routerLink="/especialistas/{{id}}/{{resultados.nombre}}/" (click)="verficar_login_sin_token()" >{{this.mail}}Reservar </button> -->
+            <button routerLink="/especialistas/{{id}}/{{resultados.nombre}}/"  >Reservar </button>
+
+            <!-- <button (click)="verficar_login_sin_token()" *ngIf="!mail">reservar</button> 
+            (click)="verficar_login_sin_token_ir_specialist()"-->
+
+          </div>          
+        </div>
+      </div>     
+    </div>
+
+    <div *ngIf="selectedSection === 2">     
+        <div class="grid-seccion2" >
+          <div class="grid-item-seccion2" *ngFor="let resultadosShop of resultadosShop">
+            <h2>Descripción del centro</h2>      
+            <p>{{ resultadosShop.descripcion}}</p>
+            <h2>Pago por QR</h2>    
+            <button class="btnqr" (click)="validarqr(resultadosShop.qr,'QR')" >
+              <p>{{qrletra}}</p>
+            </button>
+            <div [hidden]="!mostrarDiv" *ngIf="resultadosShop.qr"  class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultadosShop.qr+')' }" ></div>
+
+            <h2>Visítanos</h2>      
+            <!-- <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultado.cel+')' }" ></div> -->
+            <div class="social-icons">
+              <a  (click)="validariconos(resultadosShop.cel,'Whatsapp')" href="https://wa.me/{{resultadosShop.cel}}?text=Hola,%20me%20gustaría%20chatear%20contigo" target="_blank">
+                <img src="/assets/whatsapp.png" alt="Descripción de la imagen">  
+              </a>
+              <a (click)="validariconos(resultadosShop.face,'Facebook')" href={{resultadosShop.face}} target="_blank">
+                <img src="/assets/facebook.png" alt="Descripción de la imagen">  
+              </a>
+              <a (click)="validariconos(resultadosShop.insta,'Instagram')" [attr.href]="resultadosShop.insta" target="_blank">
+                <img src="/assets/instagram.jpg" alt="Descripción de la imagen">  
+              </a>
+              <a (click)="validariconos(resultadosShop.tiktok,'Tik Tok')" [attr.href]="resultadosShop.tiktok" target="_blank">
+                <img src="/assets/tiktok.jpg" alt="Descripción de la imagen">
+              </a>
+                  
+            </div>
+            <h2>Ubícanos</h2>
+            <div class="imagen">
+              <a (click)="validariconos(resultadosShop.ubicacion_link,'link de ubicación')" [attr.href]="resultadosShop.ubicacion_link" target="_blank">      
+                <div class="imagemap" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultadosShop.ubicacion+')' }" ></div>
+              </a>
+            </div>
+            
+            <hr>
+          </div>
+        </div>
+      
+    </div>
+    
+    <div *ngIf="selectedSection === 3">
+      <div class="grid-seccion2" >       
+          <div class="grid-item-seccion2" *ngFor="let resultadosStore of resultadosStore">         
+            <div class="card-store">
+            <div class="imagen">
+              <!-- <a (click)="validariconos(resultadosShop.ubicacion_link,'link de ubicación')" [attr.href]="resultadosShop.ubicacion_link" target="_blank">       -->
+                <div class="imagemap" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultadosStore.foto+')' }" ></div>
+              <!-- </a>             -->
+              <h3>{{resultadosStore.title}}</h3>
+              <p>{{resultadosStore.descripcion}}</p>
+              <h2>{{resultadosStore.precio}}</h2>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div *ngIf="selectedSection === 4">
+      <div class="grid-seccion2" >       
+        <div class="grid-item-seccion2" *ngFor="let resultadosImages of resultadosImages">         
+          <div class="card-store">
+            <div class="imagen">
+              <!-- <a (click)="validariconos(resultadosShop.ubicacion_link,'link de ubicación')" [attr.href]="resultadosShop.ubicacion_link" target="_blank">       -->
+                <div class="imagemap" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultadosImages.foto+')' }" ></div>
+              <!-- </a>             -->
+              <h3>{{resultadosImages.title}}</h3>
+              <p>{{resultadosImages.descripcion}}</p>
+              <!-- <h2>{{resultadosImages.precio}}</h2> -->
+            </div>          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div *ngIf="selectedSection === 5">
+    <div class="grid-seccion2no" >       
+      <div *ngFor="let resultadosResena of resultadosResena">         
+        <div class="card-resena" *ngIf="resultadosResena.opinion_r" >
+          <div class="contenido_reseña">
+            <div class="fila_reseña">
+              <ngb-rating [max]="5" [readonly]="true" [rate]="resultadosResena.calificacion_r">s</ngb-rating>
+              <p class="fecha">{{convertirATextoFecha(resultadosResena.fecha)}}</p>
+            </div>
+            <!-- <p>{{resultadosResena.calificacion_r}}</p> -->
+            <h3>{{resultadosResena.opinion_r}}</h3>
+
+            <!-- <h2>{{resultadosImages.precio}}</h2> -->
+          </div>          
+        </div>
+      </div>
+    </div>
+    </div>
+</div>   
