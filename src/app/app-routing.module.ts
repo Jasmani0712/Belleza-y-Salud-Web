@@ -58,7 +58,7 @@ const routes: Routes = [
 
 
   { path: 'shops/:id', component: ShopsListComponent },
-  { path: 'especialistas/:id/:servicio', component: EspecialistaListComponent },
+  { path: 'especialistas/:id/:servicio/:servicio_id', component: EspecialistaListComponent },
   { path: 'fecha/:id/:servicio/:especialista', component: FechaComponent },
   { path: 'horario/:id/:servicio/:especialista/:fecha', component: HorarioComponent },
   { path: 'confirmacion/:id/:servicio/:especialista/:fecha/:hora', component: ConfirmacionComponent },

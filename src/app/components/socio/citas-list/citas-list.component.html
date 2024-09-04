@@ -3,6 +3,10 @@
   <div class="imagen"  *ngFor="let resultados of resultados">
     <div class="image" ngDefaultControl   [ngStyle]="{ backgroundImage: 'url('+resultados.foto_shop+')', }" ></div>
     {{id}}
+    <div class="button-grid">
+      <!-- <button routerLink="/add-store/{{id}}">DESCARGAR CITAS</button> -->
+  
+    </div>
   </div>
   <!-- <p>{{ fecha  }}</p>
   <p>{{ fechadate  }}</p>

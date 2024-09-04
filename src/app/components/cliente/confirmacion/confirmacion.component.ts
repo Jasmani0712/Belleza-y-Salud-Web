@@ -193,7 +193,7 @@ export class ConfirmacionComponent implements OnInit{
         // console.error('foto:', foto);
         const data = {
           // Define los campos y valores del documento que deseas agregar         
-          celular_r:this.formulario.get('celular_r')!.value,
+          celular_r:"+591"+this.formulario.get('celular_r')!.value,
           cliente_comentario_r:this.formulario.get('cliente_comentario_r')!.value,
           cliente_id_r:this.uid2,
           cliente_r:this.formulario.get('cliente_r')!.value,

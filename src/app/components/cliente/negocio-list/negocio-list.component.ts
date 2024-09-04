@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit, Renderer2  } from '@angular/core';
 import { Firestore, Timestamp, collection, doc, getDocs, orderBy, query, where } from '@angular/fire/firestore';
 import { Storage,getDownloadURL,listAll,ref, uploadBytes } from '@angular/fire/storage';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,6 +17,7 @@ import { InfoComponent } from '../info/info.component';
 import { getAuth, onAuthStateChanged } from '@angular/fire/auth';
 import { DataSharingService } from 'src/app/services/data-sharing.service';
 import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-negocio-list',
   templateUrl: './negocio-list.component.html',
@@ -116,8 +117,8 @@ export class NegocioListComponent implements OnInit{
     private cdr: ChangeDetectorRef,
     private router: Router,
     private dataSharingService: DataSharingService,
-    private location: Location
-
+    private location: Location,
+    private renderer: Renderer2
   ) {
     this.negocioInterface = [{
       name: 'Prueba de dssitio',
@@ -163,10 +164,14 @@ export class NegocioListComponent implements OnInit{
     this.info='1';
     this.nombreservicio='2d';
   }
+  changeColor(newColor: string) {
+    this.renderer.setStyle(document.documentElement, '--color1', newColor);
+  }
 
   // elementos: any[] = ['Elemento 1', 'Elemento 2', 'Elemento 3'];
 
   async ngOnInit(): Promise<void> {
+    this.changeColor('#1e90ff');    
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user) {           
@@ -216,6 +221,7 @@ export class NegocioListComponent implements OnInit{
     // console.log("queryString: "+queryString+" id "+id);
     this.id=queryString!;
 
+    // Funciones que necesitan el id del negocio
     this.getShop(this.id);
     this.getServices(this.id);
     this.getStore(this.id);
@@ -311,42 +317,52 @@ export class NegocioListComponent implements OnInit{
 
 
   async getServices( id_name_shop: string) {
+
+    // Llama a la tabla servicios
     const queryRef = collection(this.firestore, 'servicios');
     // const filteredQuery = query(queryRef, where('name', '==', servicio), where('shop', '==', id_name_shop));
 
-      const filteredQuery = query(queryRef, where('shop', '==', id_name_shop));
-      console.log("Servicios de: " +id_name_shop)
-      try {
-        const querySnapshot = await getDocs(filteredQuery);
-        this.resultados = []; // Limpiar el array antes de llenarlo con los nuevos resultados
-  
-        querySnapshot.forEach((doc) => {
-          // const id = doc.id;
-          const nombre = doc.data()['name'];
-          this.nombreservicio=nombre
-          // const ciudad =  doc.data()['city'];
-          const infos =  doc.data()['info'];  
-          // this.info=infos;
-          const shop =  doc.data()['shop'];  
-          const promo =  doc.data()['promo'];  
-          const precio =  doc.data()['precio']; 
-          let neutro="neutro" ;
-          let mostrar_info=true
-          if (infos==null){
-                      this.showIcon = !this.showIcon;
-                      this.info="no hay"
-                      neutro="no hay"
-                      mostrar_info=false
-          }else{
-            neutro="si hay"
-            mostrar_info=true
-          }
-  
-          this.resultados.push({ infos,nombre,shop, promo,precio,neutro,mostrar_info }); // Agregar el resultado al array
-        });
-      } catch (error) {
-        console.error('Error al obtener los documentos:', error);
-      }
+    // Filtra de todos los servicios solo los que tengan el campo 'shop' en el id del negocio (que creo solo es su nombre)
+    const filteredQuery = query(queryRef, where('shop', '==', id_name_shop));
+    console.log("Servicios de: " +id_name_shop)
+
+    //Intenta poner los servicios
+    try {
+      //Obtiene los documentos o registros
+      const querySnapshot = await getDocs(filteredQuery);
+
+      this.resultados = []; // Limpiar el array antes de llenarlo con los nuevos resultados
+
+      //Llama a los campos a necesitar de cada servicio
+      querySnapshot.forEach((doc) => {
+        const id = doc.id; //id del servicio
+        const nombre = doc.data()['name'];
+        this.nombreservicio=nombre
+        // const ciudad =  doc.data()['city'];
+        const infos =  doc.data()['info'];  
+        // this.info=infos;
+        const shop =  doc.data()['shop'];  
+        const promo =  doc.data()['promo'];  
+        const precio =  doc.data()['precio']; 
+        const extra =  doc.data()['extra']; 
+
+        let neutro="neutro" ;
+        let mostrar_info=true
+        if (infos==null){
+                    this.showIcon = !this.showIcon;
+                    this.info="no hay"
+                    neutro="no hay"
+                    mostrar_info=false
+        }else{
+          neutro="si hay"
+          mostrar_info=true
+        }
+
+        this.resultados.push({ id,infos,nombre,shop, promo,precio,neutro,mostrar_info, extra }); // Agregar el resultado al array
+      });
+    } catch (error) {
+      console.error('Error al obtener los documentos:', error);
+    }
     
   }
 
@@ -359,6 +375,7 @@ export class NegocioListComponent implements OnInit{
 
     }
   }
+
   mostrarDiv: boolean = false; // Variable que controla la visibilidad del div
   qrletra:string='MOSTRAR CODIGO QR'
   validarqr(icono:string,redsocial:string){

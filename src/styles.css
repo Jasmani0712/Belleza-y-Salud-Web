@@ -1,6 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'ngx-toastr/toastr';
 
+:root {
+    --background-color:red;
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --red:red;
+    --azul: rgb(187, 108, 108);
+    /* --color1:#009874; */
+    /* --color1:rgb(212, 0, 255); */
+    --color1:rgb(255, 92, 86);
+
+    --subcolor1:rgb(250, 241, 240); 
+    --color2:#ffffff;
+    --color2:#000000;
+    --anterior: rgb(183, 0, 255);
+    --anterior2: rgb(253, 228, 255);
+  }
 body{
     /* background: #8E2DE2;  fallback for old browsers */
     /* background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  Chrome 10-25, Safari 5.1-6 */
@@ -26,7 +42,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 h1{
     text-align: center;
     margin: 50;
-    color: rgb(212, 0, 255);
+    color: var(--color1);
     /* font-weight: 900; */
     font-weight: 700;
 
@@ -36,6 +52,6 @@ h2{
 }
 
 button{
-    color: rgb(212, 0, 255);
+    color: var(--color1);
 
 }

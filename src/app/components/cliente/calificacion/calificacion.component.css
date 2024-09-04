@@ -16,10 +16,10 @@
     background-repeat: no-repeat;
     width: 200px;
     height:200px;      
-    border: 1px solid rgb(183, 0, 255);
+    border: 1px solid var(--color1); 
     border-radius: 20px;
     background-color: rgb(247, 240, 250);  
-    color: rgb(183, 0, 255);
+    color: var(--color1); 
     margin-bottom: 5px;
   }
   .uno .title{
@@ -52,12 +52,12 @@
   
   textarea[type="text"]:focus,
   textarea[type="text"]:hover {
-    border-color: rgb(183, 0, 255);
+    border-color: var(--color1); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .button-grid button {
-    border: 2px solid rgb(183, 0, 255);
+    border: 2px solid var(--color1); 
     border-radius: 20px;
     background-color: rgb(247, 240, 250);  
     position: relative;
@@ -74,7 +74,7 @@
 }
 
 .button-grid button:hover {
-    background-color: rgb(208, 88, 255); /* Cambiar el color de fondo al pasar el cursor */
+    background-color: var(--color1);  /* Cambiar el color de fondo al pasar el cursor */
     color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
     /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
     border: 2px solid rgb(0, 0, 0); /* Borde rojo */

@@ -62,11 +62,10 @@ export class HorarioComponent implements OnInit {
     console.log(this.id+" y "+this.servicio+" y "+this.especialista);
 
       //  console.log("cat siisisi f"+this.cats[0].name)
-    this.catService.getEspecialistas(this.id ).subscribe(cat => {
-      this.cats = cat;
-      // console.log("cat siisisi :"+this.cats[0].name_especialista)
-
-    })
+    // this.catService.getEspecialistas(this.id ).subscribe(cat => {
+    //   this.cats = cat;
+    //   // console.log("cat siisisi :"+this.cats[0].name_especialista)
+    // })
 
     this.getShops2(this.id,this.servicio);
     const queryRef = query(collection(this.firestore, 'shop'),  where('name', '==', this.id));
@@ -204,11 +203,7 @@ export class HorarioComponent implements OnInit {
             console.log("La hora actual es igual a "+nuevaHoraString);
           }
           hora_intervalo = array_intervalo.hora_intervalo;
-
           //  if(nuevaHoraString){
-          //   if(){
-
-          //   }
           //  }
         }
       }

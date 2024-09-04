@@ -29,9 +29,9 @@ h1{
     padding-right: 60px;
     padding-top: 40px;
     padding-bottom: 40px;
-    border: 1px solid rgb(183, 0, 255);
+    border: 1px solid var(--color1);
     border-radius: 20px;
-    background-color: rgb(247, 240, 250); 
+    background-color: rgb(250, 242, 240); 
 
 }
 .form-control{
@@ -45,10 +45,10 @@ h1{
     margin-left:1px;
     box-shadow: 0px 12px 10px rgba(163, 163, 163, 0.3);
 
-    border: 1px solid rgb(183, 0, 255);
-    color: rgb(183, 0, 255);
+    border: 1px solid var(--color1);
+    color: var(--color1);
     border-radius: 10px;
-    background-color: rgb(247, 240, 250);  
+    background-color: var(--subcolor1);
     position: relative;
     /* border: 1px solid transparent; Borde transparente */
     padding: 10px; /* Espacio interno */
@@ -63,7 +63,7 @@ h1{
 }
 
 .btn:hover {
-    background-color: rgb(208, 88, 255); /* Cambiar el color de fondo al pasar el cursor */
+    background-color: var(--color1); /* Cambiar el color de fondo al pasar el cursor */
     color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
     /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
     border: 1px solid rgb(0, 0, 0); /* Borde rojo */
@@ -85,9 +85,9 @@ h1{
 }
 
 .btn-google:hover {
-    border: 1px solid rgb(183, 0, 255);
+    border: 1px solid var(--color1);
 
-    color: rgb(183, 0, 255); /* Cambiar el color del texto al pasar el cursor */
+    color:var(--color1); /* Cambiar el color del texto al pasar el cursor */
     /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
 }
 .btn-google img {

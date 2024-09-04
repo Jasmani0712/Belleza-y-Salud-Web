@@ -3,7 +3,8 @@
     <div class="button-grid" *ngFor="let resultadosShop of resultadosShop">
         <button routerLink="/categorias/">CATEGORÍAS</button>
         <button routerLink="/reservas/">MIS CITAS</button>
-        <button>INFO</button>
+        <button routerLink="">INFO</button>
+        <!-- /info-video/ -->
         <button (click)="onClickLogout()">CERRAR SESIÓN</button>
         <!-- <div  class="button-grid" *ngFor="let resultadosShop of resultadosShop"> -->
             <button class="centered" routerLink="/socio/{{resultadosShop.shop_user}}" *ngIf="resultadosShop.shop_user">MODO SOCIO</button>

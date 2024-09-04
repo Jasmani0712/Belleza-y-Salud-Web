@@ -1,11 +1,13 @@
-import { Component,  ChangeDetectorRef } from '@angular/core';
+import { Component,signal,  ChangeDetectorRef } from '@angular/core';
 import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
-import signal
+// import { INITIAL_EVENTS, createEventId } from './event-utils';
+// import {signal} from 'angular/core';
+// import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-info-video',
@@ -28,10 +30,10 @@ export class InfoVideoComponent {
     },
     initialView: 'dayGridMonth',
     initialEvents: INITIAL_EVENTS, // alternatively, use the `events` setting to fetch from a feed
-    weekends: true,
+    weekends: true,//elimina la vista de fines de semana pero se puede añadir en el checkbox
     editable: true,
-    selectable: true,
-    selectMirror: true,
+    selectable: true,//selecionable un cuadro o no
+    selectMirror: false,
     dayMaxEvents: true,
     select: this.handleDateSelect.bind(this),
     eventClick: this.handleEventClick.bind(this),
@@ -48,7 +50,7 @@ export class InfoVideoComponent {
   }
 
   handleCalendarToggle() {
-    this.calendarVisible.update((bool) => !bool);
+    this.calendarVisible.update((bool: any) => !bool);
   }
 
   handleWeekendsToggle() {

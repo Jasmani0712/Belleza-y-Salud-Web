@@ -7,9 +7,9 @@
   }
   
   .button {
-    border: 3px solid rgb(183, 0, 255);
+    border: 3px solid var(--color1);
     border-radius: 20px;
-    background-color: rgb(237, 209, 255);
+    background-color: rgb(255, 216, 209);
     border-radius: 20px;
     color: #000;
     /* padding: 10px 20px; */
@@ -25,7 +25,7 @@
   }
   
   .button:hover {
-    background-color: #c32cff;
+    background-color: var(--color1);
   }
   .button[disabled]{
     background-color: #cecece;
@@ -67,10 +67,10 @@
         background-repeat: no-repeat;
         width: 100px;
         height:100px;      
-        border: 1px solid rgb(183, 0, 255);
+        border: 1px solid var(--color1);
         border-radius: 20px;
         background-color: rgb(247, 240, 250);  
-        color: rgb(183, 0, 255);
+        color: var(--color1);
         margin-bottom: 5px;
 
       }

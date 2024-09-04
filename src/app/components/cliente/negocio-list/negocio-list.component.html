@@ -21,15 +21,23 @@
       <!-- <h1 class="title">SERVICIOS</h1>   -->
       <div class="button-grid" >
         <div class="grid-container"  *ngFor="let resultados of resultados" (click)="getservicesinfo(resultados.nombre)" >       
-          <div class="grid-item">        
-            <h4 >{{resultados.nombre}}</h4>        
+          <div class="grid-container2">
+            <div class="grid-item">        
+              <h4 >{{resultados.nombre}}</h4>  
+            </div>
+            <div class="grid-item2">         
+              <h5 >{{resultados.precio}}</h5>   
+            </div>     
+            <div class="grid-item3">        
+              <p >{{resultados.extra}}</p>        
+            </div>
           </div>
           <div class="grid-item  with" >
               <img (click)="openDialog(id,resultados.nombre)"  src="/assets/infoblack.jpg"  *ngIf="resultados.mostrar_info"/>
           </div>
           <div class="grid-item with">
             <!-- <button routerLink="/especialistas/{{id}}/{{resultados.nombre}}/" (click)="verficar_login_sin_token()" >{{this.mail}}Reservar </button> -->
-            <button routerLink="/especialistas/{{id}}/{{resultados.nombre}}/"  >Reservar </button>
+            <button routerLink="/especialistas/{{id}}/{{resultados.nombre}}/{{resultados.id}}/"  >Reservar </button>
 
             <!-- <button (click)="verficar_login_sin_token()" *ngIf="!mail">reservar</button> 
             (click)="verficar_login_sin_token_ir_specialist()"-->

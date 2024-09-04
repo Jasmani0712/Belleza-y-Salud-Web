@@ -5,6 +5,10 @@
   border-radius: 5px;
   padding: 10px;
 }
+mat-calendar{
+  background-color: var(--color1); /* Cambia el color de fondo a tu preferencia */
+  color: white; /* Cambia el color del texto si es necesario */
+}
 
 /* Estilos para los días de la semana */
 .mwl-calendar-month-cell-header {
@@ -104,10 +108,10 @@
       background-repeat: no-repeat;
       width: 100px;
       height:100px;      
-      border: 1px solid rgb(183, 0, 255);
+      border: 1px solid var(--color1);
       border-radius: 20px;
-      background-color: rgb(247, 240, 250);  
-      color: rgb(183, 0, 255);
+      background-color: var(--color1);  
+      color:var(--color1);
       margin-bottom: 5px;
 
     }

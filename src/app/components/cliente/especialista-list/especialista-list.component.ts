@@ -20,6 +20,7 @@ export class EspecialistaListComponent implements OnInit {
   photo: string[];
   contador:number =0;
   id = '';
+  servicio_id = '';
   servicio='';
   foto_shop:string;
 
@@ -44,11 +45,7 @@ export class EspecialistaListComponent implements OnInit {
 
   }
   async ngOnInit(): Promise<void> {
-    
-
-
-
-
+  
        // this.id=this.route.snapshot.paramMap.get('id');
        const id = this.route.snapshot.paramMap.get('id');
        this.id = id !== null ? id : '';
@@ -57,6 +54,9 @@ export class EspecialistaListComponent implements OnInit {
        this.servicio = servicio !== null ? servicio : '';
        console.log(this.id+" y "+this.servicio);
 
+       const servicio_id = this.route.snapshot.paramMap.get('servicio_id');
+       this.servicio_id = servicio_id !== null ? servicio_id : '';
+       console.log(this.id+" y "+this.servicio+" y tambien: "+this.servicio_id)
 
        const auth = getAuth();
        onAuthStateChanged(auth, (user) => {
@@ -78,9 +78,10 @@ export class EspecialistaListComponent implements OnInit {
        
 
 
-      //  console.log("cat siisisi f"+this.cats[0].name)
-    this.catService.getEspecialistas(this.id).subscribe(cat => {
+      //  console.log("cat siisisi f"+this.servicio_id)
+    this.catService.getEspecialistas(this.id,this.servicio_id).subscribe(cat => {
       this.cats = cat;
+      console.log("cat es; "+cat)
       // console.log("cat siisisi :"+this.cats[0].name_especialista)
 
     })

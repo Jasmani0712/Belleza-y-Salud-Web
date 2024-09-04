@@ -9,6 +9,21 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./desabilitar-negocio.component.css']
 })
 export class DesabilitarNegocioComponent implements OnInit{
+
+  interruptorEncendido: boolean = false;
+  cambiarEstado() {
+    if (this.interruptorEncendido) {
+      console.log('El interruptor está encendido');
+      // Realiza aquí la acción que desees cuando el interruptor se encienda
+      this.sw_deshabilitar();
+
+    } else {
+      console.log('El interruptor está apagado');
+      // Realiza aquí la acción que desees cuando el interruptor se apague
+      this.sw_habilitar();
+    }
+  }
+
   foto_shop:string;
   id='';
   btn='Deshabilitar';
@@ -17,12 +32,13 @@ export class DesabilitarNegocioComponent implements OnInit{
   hab_btn2:boolean=true
   hab_btn1:boolean=false
   estadofecha:string=''
+  estadoShop:string=''
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id_socio');
     this.id = id !== null ? id : '';
     console.log("id: "+id)
     this.img_shop();
-    this.f_estadofecha()
+    this.f_estadofecha()//Funcion
 
     
   }
@@ -36,17 +52,30 @@ export class DesabilitarNegocioComponent implements OnInit{
         const id = doc1.id; // Obtiene el ID del documento directamente
         const estadoActual = doc1.data()['desh_fecha_inicio']; 
         const estadoActual2 = doc1.data()['desh_fecha_fin']; 
+        const estadoActual3 = doc1.data()['deshabilitado']; 
 
         if(estadoActual){
-          this.estadofecha="Negocio deshabilitado desde (mm/dd/yyyy): "+estadoActual+" hasta: "+estadoActual2
+          this.estadofecha="Reservas deshabilitadas desde (mm/dd/yyyy): "+estadoActual+" hasta: "+estadoActual2
           // alert("si")
           this.hab_btn1=true
           this.hab_btn2=false
         }else{
-          this.estadofecha="Negocio habilitado "+estadoActual
+          this.estadofecha="Reserva habilitada en todas las fechas"
           // alert("no")
           this.hab_btn1=false
           this.hab_btn2=true
+        }
+        if(estadoActual3){
+          //this.estadoShop="Negocio Deshabilitado. "
+          this.estadoShop=this.id+" deshabilitado."
+
+          this.interruptorEncendido = true;
+       
+        }else{
+          //this.estadoShop="Negocio Habilitado. "
+          this.estadoShop=this.id+" habilitado."
+
+          this.interruptorEncendido = false;        
         }
       });
   } catch (error) {
@@ -238,7 +267,7 @@ export class DesabilitarNegocioComponent implements OnInit{
         updateDoc(placeRef, newData)
           .then(() => {
             console.log('Documento modificado correctamente');
-            alert(this.id+"habilitado de manera normal.");
+            alert(this.id+" habilitado de manera normal.");
             this.estadofecha=this.id+" habilitado de manera normal."
 
             // this.router.navigateByUrl('/'); // Reemplaza 'ruta-destino' por la ruta a la que deseas ir
@@ -255,4 +284,70 @@ export class DesabilitarNegocioComponent implements OnInit{
       console.error('Error al obtener los documentos:', error);
     }
   }
+
+
+
+  async sw_habilitar(){
+    const queryRef = collection(this.firestore, 'shop');
+    const filteredQuery = query(queryRef, where('name', '==', this.id));
+    try {
+      const querySnapshot =  getDocs(filteredQuery);
+      (await (querySnapshot)).forEach((doc1) => {
+        const id = doc1.id; // Obtiene el ID del documento directamente
+        const placeRef = doc(this.firestore, 'shop', id);
+        let fechaString='';
+        let fechaString2='';
+
+        const newData = {
+          deshabilitado:false,
+        
+        };
+        updateDoc(placeRef, newData)
+          .then(() => {
+            console.log('Documento modificado correctamente');
+            alert(this.id+" habilitado de manera normal.");
+            this.estadoShop=this.id+" habilitado."
+
+            // this.router.navigateByUrl('/'); // Reemplaza 'ruta-destino' por la ruta a la que deseas ir
+            this.interruptorEncendido=false
+          })
+          .catch((error) => {
+            console.error('Error al modificar el documento: ', error);
+          });
+      });
+    } catch (error) {
+      console.error('Error al obtener los documentos:', error);
+    }
+  }
+  async sw_deshabilitar() {
+    const queryRef = collection(this.firestore, 'shop');
+    const filteredQuery = query(queryRef, where('name', '==', this.id));
+    try {
+      const querySnapshot =  getDocs(filteredQuery);
+      (await (querySnapshot)).forEach((doc1) => {
+        const id = doc1.id; // Obtiene el ID del documento directamente
+        const placeRef = doc(this.firestore, 'shop', id);
+        let fechaString='';
+        let fechaString2='';
+
+        const newData = {
+          deshabilitado:true,
+        
+        };
+        updateDoc(placeRef, newData)
+          .then(() => {
+            console.log('Documento modificado correctamente');
+            alert(this.id+" deshabilitado.");
+            this.estadoShop=this.id+" deshabilitado."
+
+            // this.router.navigateByUrl('/'); // Reemplaza 'ruta-destino' por la ruta a la que deseas ir
+            this.interruptorEncendido=true
+          })
+          .catch((error) => {
+            console.error('Error al modificar el documento: ', error);
+          });
+      });
+    } catch (error) {
+      console.error('Error al obtener los documentos:', error);
+    }  }
 }

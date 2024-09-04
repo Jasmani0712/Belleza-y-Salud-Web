@@ -55,6 +55,7 @@ export class MainComponent implements OnInit {
 
    
   }
+  
   onClickLogout() {
     this.userService.logout()
       .then(() => {
@@ -62,6 +63,7 @@ export class MainComponent implements OnInit {
       })
       .catch(error => console.log(error));
   }
+
   async getShop(uid:string) {
     const queryRef = collection(this.firestore, 'users');    
     const filteredQuery = query(queryRef, where('id', '==', uid));

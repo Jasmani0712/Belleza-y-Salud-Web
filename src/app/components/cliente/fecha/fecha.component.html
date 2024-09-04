@@ -35,9 +35,9 @@
 
 
 
-    <!-- <mat-card class="demo-inline-calendar-card" >
+    <mat-card class="demo-inline-calendar-card" >
       <mat-calendar [(selected)]="selected" routerLink="/horario/{{id}}/{{servicio}}/{{especialista}}/{{selected}}" [dateFilter]="calendarioHabilitado  ? dateFilter : null" ></mat-calendar>
-    </mat-card> -->
+    </mat-card>
 
 
 
@@ -52,7 +52,7 @@
  
 
     
-    <ng-container *ngIf="view === 'month'">
+    <!-- <ng-container *ngIf="view === 'month'">
       <div class="cal-month-view">
         <mwl-calendar-month-view
           [viewDate]="viewDate"
@@ -60,7 +60,7 @@
           (viewDateChange)="onViewDateChange($any($event))"
         ></mwl-calendar-month-view>
       </div>
-    </ng-container>
+    </ng-container> -->
     
     
 <!--   

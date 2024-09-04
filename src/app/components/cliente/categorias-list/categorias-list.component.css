@@ -15,10 +15,11 @@
 }
 .button-grid .card {
     /*width: 30.33%; /* Por defecto, 3 columnas si importa para 3 o mas columnas */
-    border: 2px solid rgb(183, 0, 255);
+    border: 2px solid var(--color1);
     border-radius: 20px;
-    background-color: rgb(247, 240, 250);  
-    color: rgb(183, 0, 255);
+    /* background-color: rgb(247, 240, 250);   */
+    /* color: rgb(183, 0, 255); */
+    color: var(--color1);
     position: relative;
     /* border: 1px solid transparent; Borde transparente */
     padding: 0px; /* Espacio interno */
@@ -31,7 +32,7 @@
 
 }
 .button-grid .card:hover{
-    background-color: rgb(235, 185, 255); /* Cambiar el color de fondo al pasar el cursor */
+    background-color: rgb(255, 222, 185); /* Cambiar el color de fondo al pasar el cursor */
     /*color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
     /*border-color: 1 red; /*ambiar el color del borde al pasar el cursor */
     border: 2px solid rgb(0, 0, 0); /* Borde rojo */
