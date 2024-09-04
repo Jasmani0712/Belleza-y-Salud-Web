@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent {
+  
   title = 'Belleza y Salud';
   firestore: Firestore = inject(Firestore)
   items$: Observable<any[]>;

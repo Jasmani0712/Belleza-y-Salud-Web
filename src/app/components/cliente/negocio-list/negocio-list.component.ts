@@ -49,6 +49,9 @@ import { Location } from '@angular/common';
   styleUrls: ['./negocio-list.component.css']
 })
 export class NegocioListComponent implements OnInit{
+
+
+  
   showSection1 = false;
   showSection2 = false;
   showSection3 = false;
@@ -164,14 +167,16 @@ export class NegocioListComponent implements OnInit{
     this.info='1';
     this.nombreservicio='2d';
   }
-  changeColor(newColor: string) {
-    this.renderer.setStyle(document.documentElement, '--color1', newColor);
-  }
+  // changeColor(newColor: string) {
+  //   this.renderer.setStyle(document.documentElement, '--color1', newColor);
+  // }
+
+ 
 
   // elementos: any[] = ['Elemento 1', 'Elemento 2', 'Elemento 3'];
 
   async ngOnInit(): Promise<void> {
-    this.changeColor('#1e90ff');    
+    // this.changeColor('#1e90ff');    
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user) {           
@@ -234,11 +239,25 @@ export class NegocioListComponent implements OnInit{
       const querySnapshot = await getDocs(queryRef);
       querySnapshot.forEach((doc) => {   
         const foto =  doc.data()['photo'];   
+        const colorShop =  doc.data()['colorShop'];   
+        // changeColor() {
+        //   document.documentElement.style.setProperty('--color1', colorShop);
+        // }
+
+        // Llamada al método para cambiar el color
+        this.changeColor(colorShop);
         this.foto_shop=foto;
       });
     } catch (error) {
       console.error('Error al obtener los documentos:', error);
     }
+   
+
+   
+  }
+  // Método para cambiar el color, definido en el componente
+  changeColor(color: string) {
+    document.documentElement.style.setProperty('--color1', color);
   }
 
   openDialog(shop: any,servicio:any) {
